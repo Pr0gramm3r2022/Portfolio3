@@ -34,7 +34,7 @@ a,
 nav, 
 .nav-links {
 
-    display: flex
+    display: flex;
 }
 
 nav {
@@ -57,9 +57,60 @@ a {
 
 a:hover {
     color: grey;
-    text-decoration: underline;
-    text-underline-offset: 1rem;
+    text-decoration: underline; /* isnt showing the 
+    underline when I hover. need to fix to understant
+    but might not keep the adjustment in the final product*/
+    /*the issue was a missed semicolon behind flex at the top. 
+    will leave out the semicolon when i want to create that effect in the future*/
+    text-underline-offset: 1rem; 
+    text-decoration-color: rgb(181, 181, 181);
 
 }
 
+.logo {
+    font-size: 2rem;
+}
 
+.logo:hover {
+    cursor: default;
+}
+
+/*Hamburger Menu */
+
+#Hamburger-nav {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black; /*change to fit your desired
+    color pallete*/
+    transition: all 0.3 ease-in-out; 
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3 ease-in-out;
+
+}
