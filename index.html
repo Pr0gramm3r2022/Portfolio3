@@ -3,63 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Website</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="mediaqueries.csss.css">
+
 </head>
 <body>
-    <nav id = "desktop-nav"> 
-        <div class= "logo "> Jamal Bonheur</div>
-        <div> 
-    <ul class = "nav-links">
-        <li> <a href = "#about">About</a> </li>
-        <li> <a href = "#experience">Experience</a> </li>
-        <li> <a href = "#projects">Projects</a> </li>
-        <li> <a href = "#contact">Contact</a> </li>
-    </ul>
-
+    <nav id = "desktop-nav">
+        <div class = "logo"> Jamal Bonheur</div>
+        <div>
+            <ul class = "nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
-    <nav id = "hamburger-nav"> 
-        <!--make sure the capitilization is proper on the definition and targeting of elements-->
-        <div class= "logo "> Jamal Bonheur</div>
-        <div class = "hamburger-menu">
-            <div class = "hamburger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-            </div>
-            <div class = "menu-links">
-                <li><a href = "#about" onclick=toggleMenu()>About</a> </li>
-                <li><a href = "#experience" onclick="toggleMenu()">Experience</a></li>
-                <!--check this again if needed-->
-                <li><a href = "#projects" onclick="toggleMenu()">Projects</a> </li>
-                <li><a href = "#contact" onclick="toggleMenu()">Contact</a> </li>
-
-            </div>
-        </div>
+    <nav id = "hamburger-nav" >
+      <div class="logo"> Jamal Bonheur</div>
+      <div class = "hamburger-icon" onclick="toggleMenu()"> 
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        
+      </div>
     </nav>
-    <section id = "profile"> 
-        <div class = "section-pic-container">
-            <img src="./assets/profilefile-pic.png" alt="Jamal Bonheur profile picture">
-            <!--there needs to be 2 pictures of yourself in the assets folder, 
-            a resume, and the links to your 2 best projects(and/or repos)-->  
-        </div>
-        <div class = "section__text">
-            <p class = "section__text__p1"> Hello, I'm</p>
-            <h1 class = "title"> Jamal Bonheur</h1>
-            <p class = "section__text__p2">
-                Full Stack Developer</p>
-
-                <div class = "btn-container">
-                    <button class = "btn btn-color-2" onclick = "window.open('./assets/resume-My Resume(9).pdf')">
-                        Download CV
-                    </button>
-                    </button>
-                    <!--copy and paste button for next step-->
-                </div>
-        </div>
+    <section id=" profile">
+      <div class="section__pic-container">
+        <img src="./assets/PortfolioImage.jpeg" alt="Jamal Bonheur profile picture" >      
+          </div>
+          <div class="section__text">
+            <p class = "section__text__p1">Hello I'm</p>
+            <h1 class= "title"> Jamal Bonheur</h1>  
+            <p class = "section__text__p2"> College Student with Web Development, Cloud Computing, and Machine Learning Experience</p>
+            <div class = "btn-container">
+              <button class="btn btn-color-2" 
+              onclick="window.open('./assets/SWE:ML Resume.pdf')">
+               Download CV</button>
+            </div>
+              <button class="btn btn-color-1" 
+              onclick="location.href='./#contact'"> Contact Info</button>
+            </div>
+            <div id="socials-container">
+              <img src="./assets/IMG_3875.jpg" 
+              alt="My LinkedIn profile"
+              class = "icon" 
+              onclick="location.href='https://www.linkedin.com/in/jamal-bonheur-b39233205/' ">
+              
+              <img src="./assets/IMG_3879.jpg" 
+              alt="My Github profile"
+              class = "icon" 
+              onclick="location.href='https://github.com/Pr0gramm3r2022' ">
+            </div>
+          </div>
     </section>
-    <script src ="script.js"> </script> </script>
+
+    <section id = "about">
+      <p class="section__text__p1">Get to Know More</p>
+      <h1 class="title"> About Me</h1>
+      <div class = "section-container">
+        <div class = "section__pic-container">
+          <img src = "./assets/IMG_8631.png" 
+          alt="Profile-picture" 
+          class="about-pic"/>
+        </div>
+      </div>
+    <div class="about-details-container">
+        <div class="about-containers">
+          <div class = "details-container">
+            <!--the img src is the experience outcome code-->
+            <img src="./assets/experience.png" 
+            alt="Experience Icon" 
+            class = "icon"
+            />
+            <h3>Experience</h3>
+            <p>2 years Programming experience</p>
+            <p>16 months AI/ML experience</p>
+            <p>20 months Cloud Computing Experience</p>
+          </div>
+          <div class = "details-container">
+            <!--the img src is the education outcome code-->
+            <img src="./assets/education.png" alt="Education Icon" class = "icon">
+            <h3>Education</h3>
+            <p>Undergraduate CS major at Kennesaw State University</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam necessitatibus debitis laudantium similique, deserunt possimus quo explicabo corrupti suscipit, et adipisci vero doloremque beatae sed, vitae culpa odio sequi? Consectetur, nulla perspiciatis. Non veniam sit et quis amet rerum sed repellat! Incidunt harum, laboriosam quis delectus possimus aspernatur omnis doloribus?
+
+
+          </p>
+        </div>
+      </div>
+        <img src="./assets/arrow.png" alt="Arrow Icon" class = "icon arrow"
+        onclick="location.href='./#experience'">
+    </section>
+
+     
+    <script src = "script.js"></script>
+    
 </body>
 </html>
